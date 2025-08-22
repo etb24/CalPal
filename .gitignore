@@ -1,0 +1,57 @@
+# macOS
+.DS_Store
+.AppleDouble
+._*
+.Spotlight-V100
+.Trashes
+
+# Xcode user/machine-specific
+DerivedData/
+build/
+Build/
+*.moved-aside
+*.xcuserstate
+*.xccheckout
+*.xcscmblueprint
+xcuserdata/
+
+# Legacy Xcode user settings (keep defaults if present)
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+
+# Swift Package Manager
+.swiftpm/
+.build/
+Packages/
+# Keep the lockfile tracked for reproducible builds
+!Package.resolved
+
+# Playgrounds
+timeline.xctimeline
+playground.xcworkspace
+
+# Optional: Fastlane, Carthage, CocoaPods (uncomment if you use them)
+# fastlane/report.xml
+# fastlane/Preview.html
+# fastlane/screenshots
+# fastlane/test_output
+# Carthage/Build/
+# Pods/          # (Either commit Pods/ or ignore it; be consistent.)
+!Podfile
+!Podfile.lock
+
+# Misc
+*.hmap
+*.ipa
+
+# Secrets / local config (adjust to your setup)
+.env
+.env.*
+*.secret.*
+Config/Secrets.xcconfig
