@@ -29,14 +29,14 @@ struct DashboardView: View {
         guard let plan else { return (0,0,0,0) }
         func pct(_ v: Double, _ t: Double) -> Double { t == 0 ? 0 : min(max(v/t, 0), 1) }
         return (
-        pct(totals.p, plan.proteinTarget),
-        pct(totals.c, plan.carbTarget),
-        pct(totals.f, plan.fatTarget),
-        pct(totals.k, plan.calorieTarget)
-    )
+            pct(totals.p, plan.proteinTarget),
+            pct(totals.c, plan.carbTarget),
+            pct(totals.f, plan.fatTarget),
+            pct(totals.k, plan.calorieTarget)
+        )
     }
 
-//      Future xp implementation
+//    Future xp implementation
 //    private var dailyXP: Int {
 //        guard let plan else { return 0 }
 //        var xp = 0
@@ -52,9 +52,9 @@ struct DashboardView: View {
         NavigationStack {
             VStack(spacing: 20) {
                 HStack(spacing: 16) {
-                    MacroRing(title: "Protein", value: progress.p, current: totals.p, target: plan?.proteinTarget ?? 0, unit: "g", systemImage: "p.circle.fill")
-                    MacroRing(title: "Carbs", value: progress.c, current: totals.c, target: plan?.carbTarget ?? 0, unit: "g", systemImage: "c.circle.fill")
-                    MacroRing(title: "Fat", value: progress.f, current: totals.f, target: plan?.fatTarget ?? 0, unit: "g", systemImage: "f.circle.fill")
+                    MacroRing(title: "Protein", value: progress.p, current: totals.p, target: plan?.proteinTarget ?? 0, unit: "g", systemImage: "p.circle.fill", color: .orange, )
+                    MacroRing(title: "Carbs", value: progress.c, current: totals.c, target: plan?.carbTarget ?? 0, unit: "g", systemImage: "c.circle.fill", color: .green, )
+                    MacroRing(title: "Fat", value: progress.f, current: totals.f, target: plan?.fatTarget ?? 0, unit: "g", systemImage: "f.circle.fill", color: .yellow, )
                 }
                 .padding(.horizontal)
 
@@ -63,18 +63,19 @@ struct DashboardView: View {
                     Text("Calories").font(.headline)
                     Gauge(value: progress.k) { Text("\(Int(totals.k)) / \(Int(plan?.calorieTarget ?? 0)) kcal") } currentValueLabel: { Text("\(Int(totals.k))") }
                     .gaugeStyle(.accessoryLinear)
+                    .tint(.secondary)
                 }
                 .padding(.horizontal)
 
 
-                // Future xp implementation
+//                Future xp implementation
                 
-//                HStack {
+                HStack {
 //                    Label("Today's XP: \(dailyXP)", systemImage: "star.fill")
 //                    Spacer()
-//                    NavigationLink { PlanEditor() } label: { Label("Edit Targets", systemImage: "slider.horizontal.3") }
-//                }
-//                .padding(.horizontal)
+                    NavigationLink { PlanEditor() } label: { Label("Edit Targets", systemImage: "slider.horizontal.3") }
+                }
+                .padding(.horizontal)
 
 
                 Divider()

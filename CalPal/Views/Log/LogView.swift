@@ -39,7 +39,7 @@ struct LogView: View {
             }
             .navigationTitle("Log")
             .toolbar { ToolbarItem(placement: .topBarTrailing) { Button { showingAdd = true } label: { Label("Add", systemImage: "plus.circle.fill") } } }
-            .sheet(isPresented: $showingAdd) { AddEntrySheet() }
+            .sheet(isPresented: $showingAdd) { LogFoodSheet() }
         }
     }
 }

@@ -7,12 +7,11 @@ struct SettingsView: View {
         NavigationStack {
             List {
                 Section("Goals & Data") {
-                    Button { showPlan = true } label: { Label("Macro Plan", systemImage: "slider.horizontal.3") }
+                    NavigationLink { PlanEditor() } label: { Label("Edit Targets", systemImage: "slider.horizontal.3") }
                 }
                 Section("About") { LabeledContent("Version", value: "0.1 (MVP)") }
             }
             .navigationTitle("Settings")
-            .sheet(isPresented: $showPlan) { PlanEditor() }
         }
     }
 }

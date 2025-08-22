@@ -8,12 +8,14 @@ struct MacroRing: View {
     let target: Double
     let unit: String
     let systemImage: String
+    let color: Color
 
 
     var body: some View {
         VStack(spacing: 8) {
             Gauge(value: value) { } currentValueLabel: { Text("\(Int(current))") }
             .gaugeStyle(.accessoryCircularCapacity)
+            .tint(color) 
             .frame(width: 90, height: 90)
             VStack(spacing: 2) {
                 Label(title, systemImage: systemImage).font(.subheadline)

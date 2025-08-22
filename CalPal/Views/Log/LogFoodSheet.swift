@@ -2,7 +2,7 @@ import SwiftUI
 import SwiftData
 
 
-struct AddEntrySheet: View {
+struct LogFoodSheet: View {
     @Environment(\.dismiss) private var dismiss
     @Environment(\.modelContext) private var context
 
