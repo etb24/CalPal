@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AA4A41EC2E59315600C15C5D /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = AA4A41EB2E59314E00C15C5D /* .gitignore */; };
+		AAB926B42E6644D6000862ED /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = AAB926B32E6644CE000862ED /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		AA4A41EB2E59314E00C15C5D /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		AAB926B32E6644CE000862ED /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		AAC5D1462E556EA800C77C59 /* CalPal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalPal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAC5D1552E556EA900C77C59 /* CalPalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalPalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAC5D15F2E556EA900C77C59 /* CalPalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalPalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -80,6 +82,7 @@
 		AAC5D13D2E556EA800C77C59 = {
 			isa = PBXGroup;
 			children = (
+				AAB926B32E6644CE000862ED /* README.md */,
 				AA4A41EB2E59314E00C15C5D /* .gitignore */,
 				AAC5D1482E556EA800C77C59 /* CalPal */,
 				AAC5D1582E556EA900C77C59 /* CalPalTests */,
@@ -218,6 +221,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAB926B42E6644D6000862ED /* README.md in Resources */,
 				AA4A41EC2E59315600C15C5D /* .gitignore in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
